@@ -1,0 +1,142 @@
+name: Upstream release sync
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: upstream-release-sync
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: Albert-mah/app-library-bench
+  RELEASE_BRANCH: main
+  CUSTOM_BRANCH: custom/main
+
+jobs:
+  sync:
+    name: Mirror upstream and open sync PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out custom branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.CUSTOM_BRANCH }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream and fork refs
+        run: |
+          set -euo pipefail
+          git remote add upstream "https://github.com/${UPSTREAM_REPO}.git" 2>/dev/null || git remote set-url upstream "https://github.com/${UPSTREAM_REPO}.git"
+          git fetch upstream "${RELEASE_BRANCH}" --tags
+          git fetch origin "${RELEASE_BRANCH}" "${CUSTOM_BRANCH}" --tags
+
+      - name: Mirror latest upstream release tag
+        id: upstream_release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="$(gh release view --repo "${UPSTREAM_REPO}" --json tagName --jq .tagName 2>/dev/null || true)"
+          if [ -n "${tag}" ]; then
+            git fetch upstream "refs/tags/${tag}:refs/tags/${tag}" || true
+            git push origin "refs/tags/${tag}:refs/tags/${tag}" || true
+            echo "Mirrored upstream release tag ${tag}."
+          else
+            echo "No upstream GitHub release was found; branch sync will continue without a release tag."
+          fi
+          echo "tag=${tag}" >> "${GITHUB_OUTPUT}"
+
+      - name: Mirror upstream release branch
+        id: mirror
+        run: |
+          set -euo pipefail
+          git branch -f "${RELEASE_BRANCH}" "upstream/${RELEASE_BRANCH}"
+          if git push origin "${RELEASE_BRANCH}:${RELEASE_BRANCH}"; then
+            echo "mirrored=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "mirrored=false" >> "${GITHUB_OUTPUT}"
+            echo "::error::Could not fast-forward mirror ${RELEASE_BRANCH}. Check branch rules or upstream history rewrites."
+            exit 1
+          fi
+
+      - name: Check whether custom branch needs upstream commits
+        id: diff
+        run: |
+          set -euo pipefail
+          git fetch origin "${RELEASE_BRANCH}" "${CUSTOM_BRANCH}"
+          commits="$(git rev-list --count "origin/${CUSTOM_BRANCH}..origin/${RELEASE_BRANCH}")"
+          echo "commits=${commits}" >> "${GITHUB_OUTPUT}"
+          if [ "${commits}" = "0" ]; then
+            echo "custom branch already contains origin/${RELEASE_BRANCH}."
+          else
+            echo "${commits} upstream commit(s) need to be merged into ${CUSTOM_BRANCH}."
+          fi
+
+      - name: Create or update upstream sync PR
+        id: pr
+        if: steps.diff.outputs.commits != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          title="Sync upstream ${UPSTREAM_REPO}@${RELEASE_BRANCH}"
+          body_file="$(mktemp)"
+          {
+            echo "This PR syncs \`${RELEASE_BRANCH}\`, the mirror branch for \`${UPSTREAM_REPO}\`, into \`${CUSTOM_BRANCH}\`."
+            echo
+            if [ -n "${{ steps.upstream_release.outputs.tag }}" ]; then
+              echo "Upstream release marker: \`${{ steps.upstream_release.outputs.tag }}\`."
+            else
+              echo "No upstream GitHub release exists yet; this sync uses the upstream branch head as the source of truth."
+            fi
+            echo
+            echo "After this PR is merged, the fork release workflow will rebuild from \`${CUSTOM_BRANCH}\` and publish a \`vX.Y.Z-fork.N\` tag."
+          } > "${body_file}"
+
+          pr_url="$(gh pr list \
+            --repo "${GITHUB_REPOSITORY}" \
+            --base "${CUSTOM_BRANCH}" \
+            --head "${GITHUB_REPOSITORY_OWNER}:${RELEASE_BRANCH}" \
+            --state open \
+            --json url \
+            --jq '.[0].url // ""')"
+
+          if [ -z "${pr_url}" ]; then
+            pr_url="$(gh pr create \
+              --repo "${GITHUB_REPOSITORY}" \
+              --base "${CUSTOM_BRANCH}" \
+              --head "${RELEASE_BRANCH}" \
+              --title "${title}" \
+              --body-file "${body_file}")"
+          else
+            gh pr edit "${pr_url}" --title "${title}" --body-file "${body_file}"
+          fi
+
+          echo "url=${pr_url}" >> "${GITHUB_OUTPUT}"
+          echo "Sync PR: ${pr_url}"
+
+      - name: Enable auto-merge for sync PR
+        if: steps.pr.outputs.url != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh pr merge "${{ steps.pr.outputs.url }}" --auto --merge; then
+            echo "Auto-merge enabled for ${{ steps.pr.outputs.url }}."
+          else
+            echo "::warning::Auto-merge could not be enabled. The sync PR will remain open for manual review."
+            gh pr comment "${{ steps.pr.outputs.url }}" \
+              --body "Auto-merge could not be enabled by the workflow. Please review and merge this sync PR manually if it is correct." || true
+          fi
