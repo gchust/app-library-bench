@@ -11,10 +11,10 @@ changes. Do not commit fork-only work directly to `main`.
 
 ## Upstream sync
 
-`.github/workflows/upstream-release-sync.yml` runs on a schedule and can also be started
-manually. It fetches upstream `main`, fast-forwards the fork's `main` mirror branch, mirrors
-the latest upstream release tag if one exists, and opens or updates a pull request from
-`main` into `custom/main`.
+`.github/workflows/upstream-release-sync.yml` runs hourly at minute 17 and can also be
+started manually. It fetches upstream `main`, fast-forwards the fork's `main` mirror branch,
+mirrors the latest upstream release tag if one exists, and opens or updates a pull request
+from `main` into `custom/main`.
 
 The workflow attempts to enable auto-merge for the sync PR. If GitHub permissions or branch
 rules block auto-merge, the PR remains open for manual review.
