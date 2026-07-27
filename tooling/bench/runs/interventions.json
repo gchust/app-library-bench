@@ -1,0 +1,152 @@
+{
+ "r62": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:30"
+   }
+  ]
+ },
+ "r63": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:30"
+   }
+  ]
+ },
+ "r64": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:31"
+   }
+  ]
+ },
+ "r66": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:31"
+   }
+  ]
+ },
+ "r67": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:32"
+   }
+  ]
+ },
+ "r68": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "driver",
+    "at": "2026-06-28T14:55:32"
+   }
+  ]
+ },
+ "crm-fable": {
+  "nudges": 3,
+  "autoApprovals": 2,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "Interrupt the stalled thinking process and prompt it to continue.",
+    "at": "2026-07-10T17:51:17"
+   },
+   {
+    "kind": "nudge",
+    "detail": "Type 'continue' to proceed to Phase 3.",
+    "at": "2026-07-10T17:58:12"
+   },
+   {
+    "kind": "nudge",
+    "detail": "Provide instructions or press Enter to resume.",
+    "at": "2026-07-10T18:37:43"
+   },
+   {
+    "kind": "approve",
+    "detail": "",
+    "at": "2026-07-10T18:42:28"
+   },
+   {
+    "kind": "approve",
+    "detail": "",
+    "at": "2026-07-10T18:44:42"
+   }
+  ]
+ },
+ "crm-codex56": {
+  "nudges": 1,
+  "autoApprovals": 0,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "Press Enter to submit the prompt or provide a new instruction.",
+    "at": "2026-07-10T18:19:36"
+   }
+  ]
+ },
+ "erp-fable": {
+  "nudges": 3,
+  "autoApprovals": 2,
+  "events": [
+   {
+    "kind": "nudge",
+    "detail": "Press Enter or provide a prompt to continue creating workflows.",
+    "at": "2026-07-10T18:25:19"
+   },
+   {
+    "kind": "approve",
+    "detail": "",
+    "at": "2026-07-10T18:29:28"
+   },
+   {
+    "kind": "nudge",
+    "detail": "Press Enter to continue the ACL configuration step.",
+    "at": "2026-07-10T18:31:47"
+   },
+   {
+    "kind": "approve",
+    "detail": "",
+    "at": "2026-07-10T18:35:35"
+   },
+   {
+    "kind": "nudge",
+    "detail": "Press Enter or type a message to resume the agent.",
+    "at": "2026-07-10T18:38:17"
+   }
+  ]
+ },
+ "erp-codex56": {
+  "nudges": 0,
+  "autoApprovals": 1,
+  "events": [
+   {
+    "kind": "approve",
+    "detail": "",
+    "at": "2026-07-10T18:41:28"
+   }
+  ]
+ }
+}

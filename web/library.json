@@ -249,6 +249,25 @@
               "verdict": "fix"
             }
           }
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-01.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Products、Suppliers、Purchase Orders、Movements、Reports",
+                "Server-paged lists for inv_items, inv_suppliers, and inv_stock_records; complete detail drawers; real create/update forms; movement writes reconcile on-hand inventory; CRUD and relation roundtrips verified and QA records cleaned up.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Inventory Management: inbound/outbound linkage, status transitions, and summary charts. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/01-inventory-management.html",
@@ -503,6 +522,25 @@
               "verdict": "fix"
             }
           }
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-02.jpg",
+              "reasoning": [
+                "8 个视图:Overview、Assets、Categories、Maintenance、Depreciation、Sites、Vendors、Reports",
+                "Six server-paginated business views with live search, filters, sorting, related-record details, validated create and update forms; real create-edit-read-cleanup test passed.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Asset Management: three-section asset cards, depreciation progress bars, and maintenance tracking. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/02-asset-management.html",
@@ -745,6 +783,25 @@
               "verdict": "fix"
             }
           }
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-03.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Content、Campaigns、Tags、Tag Links、Reports",
+                "Server-paginated lists for cc_campaigns, cc_contents, cc_contents_tags, and cc_tags; full detail drawers; content, campaign, and tag create/update forms; content-tag link creation; real API round-trip verified with temporary content create, relation link, edit, read-back, and saf",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Content Calendar: a calendar view with status pills and a right-side summary panel. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/03-content-calendar.html",
@@ -920,6 +977,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-04.jpg",
+              "reasoning": [
+                "8 个视图:Overview、Calendar、Posts、Accounts、Tags、Post–Tag Links、Analytics、Inbox",
+                "Live NocoBase server-side lists, details, validated create/update forms, relationship selection, success feedback, pagination verified; owned QA tag created, edited, verified, and removed",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Social Media Calendar: a post composer with a live phone preview and a scheduling calendar. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/04-social-media-calendar.html",
@@ -1105,6 +1181,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-05.jpg",
+              "reasoning": [
+                "9 个视图:Help Center Overview、Guides Article Management、API Documentation、Community Categories、Community Tags、Community Article Links、Knowledge Base Status & Reports、Article Detail Reader、CRUD Drawers",
+                "Server-side search/filter/sort/pagination for all four business tables; real create/update for articles, categories and tags; article-tag association creation and article-side relationship editing; detail drawers with related data; temporary CRUD records verified and safely remov",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Knowledge Base: circular category cards with search-driven show/hide. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/05-knowledge-base.html",
@@ -1275,6 +1370,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-06.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Warehouses、Locations、Inventory、Movements、Reports",
+                "All four core collections have server-side list search/filter/sort/pagination, full detail drawers with related records, validated create/edit forms, real nb.create/nb.update persistence, success feedback, and verified CRUD roundtrips.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Warehouse Management: a warehouse / location / stock three-tier model with a location tree and an inventory dashboard. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/06-warehouse-management.html",
@@ -1425,6 +1539,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-07.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Tickets、Timeline、Agents、Comments、Reports",
+                "Ticket created, opened in detail, edited, found through the server-filtered list, and safely deleted; Agents and Comments also have real create/edit forms and detail views.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — IT Helpdesk: a kanban board of ticket cards showing priority, SLA, and assignee avatars. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/07-it-helpdesk.html",
@@ -1574,6 +1707,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-08.jpg",
+              "reasoning": [
+                "5 个视图:Overview、Templates、People、Tasks、Reports",
+                "Created an E2E employee, verified it in list and detail, edited name/position/status, deleted only that test record, and confirmed cleanup; employee and task production forms use nb.create/nb.update.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Onboarding Checklist: an onboarding journey with progress tracking and a checklist dialog. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/08-onboarding-checklist.html",
@@ -1723,6 +1875,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-09.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Assets、Movements、Reports",
+                "Assets and movements support real create, paginated list/search, detail, edit, and protected deletion; E2E completed both CRUD round trips and removed all test records.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Asset Tracking: checkout / return flows with a location timeline. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/09-asset-tracking.html",
@@ -1883,6 +2054,25 @@
             }
           },
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-10.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Rooms、Bookings、Reports",
+                "Rooms and bookings support real create/update forms and detail views; E2E created, listed, opened, edited, and deleted one uniquely named booking, with test data cleanup verified.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Meeting Room Booking: a gantt-style room-availability board and a calendar scoped to the current user. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/10-meeting-room-booking.html",
@@ -1955,6 +2145,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-11.jpg",
+              "reasoning": [
+                "5 个视图:Overview、Workflows、Nodes、Runs、Analytics",
+                "Real workflow CRUD verified end-to-end; nodes and runs also support create, edit, detail, and session-safe deletion",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "status": "deprecated",
@@ -2080,6 +2289,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "d61u0voi2qq",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-12.jpg",
+              "reasoning": [
+                "7 个视图:Overview、Inbox、All Tickets、Messages、Reports、Contacts、Settings",
+                "Live sup_tickets and sup_messages lists, details, validated create/edit forms, related data, and safe deletion of session-created test records; Playwright completed a full ticket CRUD round trip",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Support Inbox: a three-pane inbox — queue, conversation, and customer panel. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/12-support-ticket-software.html",
@@ -2224,6 +2452,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "u8qy3w0f3kj",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-13.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Employees、Punches、Reports",
+                "Server-paginated employee and punch lists; details and related data; real create/update forms; E2E employee create → list/detail → edit → delete round-trip completed with test-only deletion guard",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Attendance Tracker: attendance KPIs, a monthly heatmap, and dual donut charts for status distribution. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/13-attendance-tracker.html",
@@ -2347,6 +2594,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "sat_survey_dashboard",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-14.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Surveys、Responses、Reports",
+                "Real ess_responses create → list/detail verification → edit → protected delete completed; survey create/edit and detail flows implemented",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Satisfaction Survey: an eNPS gauge, a dimension heatmap, and a grid of feedback cards. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/14-satisfaction-survey.html",
@@ -2491,6 +2757,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "hc628wy0e15",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-15.jpg",
+              "reasoning": [
+                "14 个视图:Overview、My Issues、Starred、Active Issues、Backlog、All Issues、Project-filtered Issues、Projects、Cycles、Roadmap…",
+                "Real iss_issues create, detail verification, update, server-list verification, and guarded deletion completed; project create/edit forms are connected to iss_projects.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Issue Tracking: a tree table with multi-select facets and checkbox columns. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/15-issue-tracking.html",
@@ -2614,6 +2899,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "l45tb657j31",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-16.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Campaigns、Activities、Reports",
+                "Campaigns and activities support real create/update, full detail and associations; guarded test-record deletion. E2E completed campaign create → list/detail → edit → delete with no leftover records.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Campaign Command: a native gantt, KPI cards, donut charts, and data tables. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/16-campaign-management.html",
@@ -2728,6 +3032,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "hhb3ea1wfpv",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-17.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Tickets、Policies、Reports",
+                "Real SLA ticket create, server-filtered list lookup, detail verification, edit, and session-protected deletion completed; policy create/edit and associated-ticket details implemented.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — SLA Monitor: a KPI bar, a three-column war-room board, and countdown rings. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/17-sla-management.html",
@@ -2843,6 +3166,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "tgav47chrdi",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-18.jpg",
+              "reasoning": [
+                "5 个视图:Overview、Requests、Employees、Reports、Policy",
+                "Real employee and leave-request create/edit forms; employee E2E create → list/detail → edit → delete completed, with deletion restricted to session-created records",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Leave Management: a multi-select calendar with pills, a balance dashboard, and a request ledger. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/18-leave-management.html",
@@ -3000,6 +3342,25 @@
           },
           "skillVersion": "v260611",
           "backupId": "dspro-14232-20260612"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-19.jpg",
+              "reasoning": [
+                "4 个视图:Overview、Employees、Departments、Reports",
+                "Employees and departments both verified through real create, list/detail, edit, and safe test-record deletion; server pagination verified.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Employee Directory: a search hero, multi-select facets, and avatar cards. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/19-employee-directory.html",
@@ -3125,6 +3486,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "5luhcm211yb",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-20.jpg",
+              "reasoning": [
+                "5 个视图:My Expenses、Team Reports、Expense Items、Analytics、Settings",
+                "Created a real expense item, verified it in details and the server-paginated list, edited its merchant/amount/notes, reopened it, then deleted only that newly created record and restored the associated report total.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Expense Reporting: an expense-report header card, receipts, and an approval timeline. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/20-expense-reporting.html",
@@ -3228,6 +3608,25 @@
           "model": "deepseek-v4-flash",
           "pageUid": "838x95w9jjt",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-21.jpg",
+              "reasoning": [
+                "7 个视图:Asset Operations、Register、Maintenance、Depreciation、Reports、Tags、Assignments",
+                "Created an E2E-prefixed asset, verified it in list and detail, edited its name, then safely deleted only that test record; no test data remains.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Asset Management Software: a heavy-asset register, a depreciation curve, and a maintenance calendar. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/21-asset-management-software.html",
@@ -3305,6 +3704,25 @@
           "model": "deepseek-v4-pro",
           "pageUid": "yr2ytxdrimz",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-22.jpg",
+              "reasoning": [
+                "7 个视图:Inventory、Assets、Categories、Locations、Movements、Reports、Audit",
+                "Real ais_assets round trip passed: server pagination, create test asset, verify in detail, edit, delete only the created record; category and location create/edit forms are connected to ais_categories and ais_locations.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Asset Inventory: a location-tree facet, a grid of asset cards, and statistics. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/22-asset-inventory.html",
@@ -3382,6 +3800,25 @@
           "model": "deepseek-v4-pro",
           "pageUid": "l7c00e73ump",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-23.jpg",
+              "reasoning": [
+                "7 个视图:Inbox、Tracking Overview、SLA、Customers、Agents、Activity、Reports",
+                "Real ticket create/detail/edit/delete round trip passed; customer, agent, activity and ticket create/edit forms use nb.create/nb.update; all core lists use server-side filter/sort/page parameters.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Ticket Tracking: an escalation pipeline, SLA countdown rings, and a timeline. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/23-ticket-tracking.html",
@@ -3459,6 +3896,25 @@
           "model": "deepseek-v4-pro",
           "pageUid": "ig6l2t7rrdu",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-24.jpg",
+              "reasoning": [
+                "6 个视图:Board、Shipments、Carriers、Routes、Events、Analytics",
+                "Created an E2E shipment, verified it in list/detail, edited the recipient, deleted only that test shipment, and confirmed zero residual E2E records.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Delivery Tracking: a status pipeline, map-style tracking cards, and performance metrics. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/24-delivery-tracking.html",
@@ -3536,6 +3992,25 @@
           "model": "deepseek-v4-pro",
           "pageUid": "145mrxav21l",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-25.jpg",
+              "reasoning": [
+                "8 个视图:Overview、Devices、Locations、Owners、Compliance、Assignments、Lifecycle、Reports",
+                "Live device create, list/detail verification, edit, and session-owned delete passed; owner and location create/edit forms implemented",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Device Management: device cards with SVG health rings and compliance badges. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/25-device-management.html",
@@ -3613,6 +4088,25 @@
           "model": "deepseek-v4-pro",
           "pageUid": "2nr45pokz76",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-26.jpg",
+              "reasoning": [
+                "10 个视图:Lifecycle、Repository: Contracts、Repository: Parties、Repository: Owners、Repository: Tags、Repository: Tag Links、Repository: Events、Approvals、Renewals、Reports",
+                "Created a test contract, verified it in list and detail, edited it, then deleted only that newly created record; server pagination also verified.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Contract Management: a 7-stage contract pipeline with approvals and expiry tracking (workflow-driven). Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/26-contract-management.html",
@@ -3664,6 +4158,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-27.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Inbox、Insights、Topics、Customers、Surveys",
+                "Server-side lists for cfb_feedback, cfb_customers, cfb_topics, cfb_channels and cfbFeedbackCfbTopics; feedback/customer/topic/channel detail and create/edit forms; feedback E2E create→detail→edit→delete passed with zero leftover test records",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Customer Feedback: an NPS half-circle gauge, facets, and a feedback inbox. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/27-customer-feedback.html",
@@ -3715,6 +4228,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-28.jpg",
+              "reasoning": [
+                "8 个视图:Overview、Catalog: Courses、Catalog: Categories、My Learning、Sessions、Instructors、Compliance、Reports",
+                "Real course create → list/detail verification → edit → delete completed; forms and details support all five business resources; deletion restricted to session-created records.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Training Tracker: course cards, completion progress, and a scheduling calendar. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/28-training-tracker.html",
@@ -3766,6 +4298,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-29.jpg",
+              "reasoning": [
+                "8 个视图:Overview、Jobs、Pipeline、Interviews、Talent pool、Recruiters、Sources、Reports",
+                "Candidate created, found in server-paginated list and detail drawer, edited, verified, then deleted; all writes used @light/shared nb APIs and no test records remain.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Candidate Tracking: a hiring funnel board, candidate cards, and scoring. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/29-candidate-tracking.html",
@@ -3817,6 +4368,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-30.jpg",
+              "reasoning": [
+                "7 个视图:Overview、New request、My requests、Catalog、Knowledge、Agents、Reports",
+                "Created a real service request, verified it in list and detail views, edited its title, then deleted only that session-created test record; category and agent create/edit forms also write through nb.create/nb.update.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Service Request: a 3-step request wizard, an SLA banner, and a request list. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/30-service-request.html",
@@ -3868,6 +4438,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-31.jpg",
+              "reasoning": [
+                "7 个视图:Overview、Datasets、Rules、Anomalies、Runs、Score History、Reports",
+                "All five collections have live create/edit/detail forms; E2E verified anomaly create, detail, edit, server search, and safe deletion with zero residual test records.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Data Quality: a dark quality wallboard — score cards, trends, and anomaly feed. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/31-data-quality.html",
@@ -3919,6 +4508,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-32.jpg",
+              "reasoning": [
+                "7 个视图:Overview、Issues、Board、Components、Milestones、Users、Reports",
+                "Real create, detail, edit, and guarded delete round trip passed for a Playwright-created issue; forms also support all four business collections",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Bug Tracking: a severity-colored table, milestones, and reproduction details. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/32-bug-tracking.html",
@@ -3970,6 +4578,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-33.jpg",
+              "reasoning": [
+                "10 个视图:Overview、Claims、Expenses、Approvals、Policies、Directory、Categories、Reports、Receipts、Help",
+                "Created an E2E policy, verified it in list and detail, edited it, verified the updated value, then deleted only that test record; server pagination was exercised where multiple pages existed.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "prompt": "Build a NocoBase app — Expense Reimbursement: a submission wizard, a my-reimbursements view, and approval progress. Match the layout and signature visuals of this reference prototype: https://static-docs.nocobase.com/solution/templates/33-expense-reimbursement.html",
@@ -4019,6 +4646,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-34.jpg",
+              "reasoning": [
+                "8 个视图:Help Center、Topics: Categories、Topics: Tags、Topics: Article-Tag Links、Trending: Articles、Community: Authors、Status: Tickets、Analytics",
+                "Created a uniquely named ticket, verified it in list and detail, edited subject/status, deleted only that session-created record, and confirmed cleanup.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "1sdejvba6j2",
@@ -4069,6 +4715,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-35.jpg",
+              "reasoning": [
+                "7 个视图:Approval Desk、Documents、Templates、Workflows、Audit Log、Signers、Reports",
+                "All four core collections have server-paginated lists, details, create/edit forms; document E2E completed create → list/detail → edit → delete with session-only deletion guard.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "eojbwcafzv7",
@@ -4119,6 +4784,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-36.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Nodes、Links、Alerts、Sites、Reports",
+                "All four core tables support real create/update forms, server-paginated lists and details; E2E completed Alert create → list/detail → edit → delete, with deletion limited to the test record created in-session.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "5g2pm8rmp2a",
@@ -4169,6 +4853,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-37.jpg",
+              "reasoning": [
+                "5 个视图:Vault、Documents、People、Compliance、Audit log",
+                "Real document create → server-filtered list → detail → edit → restricted test-record delete completed; employee and category create/edit forms implemented; all three lists use server pagination/filter/sort",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "roe72fm2qdx",
@@ -4246,6 +4949,25 @@
             }
           },
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-38.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Departures、Templates、Tasks、Assets、Reports",
+                "All four business collections provide real create/edit forms and details; E2E completed departure create → list/detail → edit → delete, plus server-side pagination round-trips for every list.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "339r8qwehus",
@@ -4296,6 +5018,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-39.jpg",
+              "reasoning": [
+                "5 个视图:Overview、Headcount、Attrition、Diversity、Compensation",
+                "Real employee create → paginated list/detail → edit → session-protected delete completed; department and headcount snapshot create/edit forms are also available.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "ksbxehqpl38",
@@ -4346,6 +5087,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-40.jpg",
+              "reasoning": [
+                "6 个视图:Pipeline、Renewals、Customers、Playbooks / Products、Playbooks / Team、Reports",
+                "Created a uniquely named renewal, verified it through the server-filtered list and detail drawer, edited its title and ARR, then deleted only that test record; pagination and all navigation views were also verified.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "li7itwkackw",
@@ -4396,6 +5156,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-41.jpg",
+              "reasoning": [
+                "7 个视图:Overview、Assets、Checkouts、Warranties、Models、People、Reports",
+                "Four core tables have real server-paged lists, detail drawers, validated create/edit forms, and guarded deletion for self-created E2E records; Playwright completed employee create-detail-edit-delete and asset pagination.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "pfudn9ymixl",
@@ -4446,6 +5225,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-42.jpg",
+              "reasoning": [
+                "9 个视图:Overview、Employees、Org Chart、Departments、Positions、Locations、Documents、Compensation、Reports",
+                "Created a unique E2E employee, verified it in list and detail, edited name and salary, then deleted only that newly created record.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "wfxdyypaws5",
@@ -4496,6 +5294,25 @@
           },
           "model": "claude-opus",
           "skillVersion": "v260605"
+        },
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-43.jpg",
+              "reasoning": [
+                "7 个视图:Overview、Interviews、Scorecards、Candidates、Jobs、Interviewers、Reports",
+                "Created a real candidate, verified it in list and detail, edited it, verified the updated value, then deleted only that test record.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
         }
       },
       "pageUid": "qpwdjhwpynw",
@@ -4530,7 +5347,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-44.jpg",
+              "reasoning": [
+                "7 个视图:Pipeline、Inspections、Refunds、Analytics、Settings: Return Reasons、Settings: Warehouses、Settings: Inspectors",
+                "Created a real return request, verified it in the server-backed list and detail drawer, edited customer and QC fields, then safely deleted only that session-created record.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "45",
@@ -4552,7 +5390,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-45.jpg",
+              "reasoning": [
+                "10 个视图:Overview、Templates、How it works、Pricing、Docs、Categories、Tags、Template Tags、Generations、Reports",
+                "Five live NocoBase tables support server-side list operations; applicable records support detail/create/edit, and E2E completed a safe Tag create-view-edit-delete round trip with cleanup.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "46",
@@ -4574,7 +5433,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-46.jpg",
+              "reasoning": [
+                "6 个视图:Overview、Servers、Clusters、Alerts、Metrics、Reports",
+                "Real nb.list pagination/filter/sort plus nb.create/nb.update; E2E created, viewed, edited and deleted only its own cluster test record",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "47",
@@ -4596,7 +5476,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-47.jpg",
+              "reasoning": [
+                "6 个视图:Stream、Themes、Triage、Pulse、Settings: Teams、Settings: Replies",
+                "Real feedback create → detail → edit → server-filtered list → delete completed; theme, team, and reply create/edit forms and detail views implemented",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "48",
@@ -4618,7 +5519,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-48.jpg",
+              "reasoning": [
+                "6 个视图:My Todo、All Requests、Workflows、Types、People、Reports",
+                "Created an E2E TEST request, verified it in detail, edited its subject, deleted only that test record, and confirmed cleanup.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "49",
@@ -4640,7 +5562,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-49.jpg",
+              "reasoning": [
+                "8 个视图:Calibration (Overview)、My Reviews、Goals、Employees、Cycles、Competencies、Scores、Reports",
+                "Five core collections support real server-side lists, details, create and update; E2E completed an Employees create→list/detail→edit→delete round trip with test-only deletion protection.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "50",
@@ -4662,7 +5605,28 @@
         "published": "oss"
       },
       "dataType": "html",
-      "category": "build"
+      "category": "build",
+      "branches": {
+        "native": {
+          "label": "原生前端线",
+          "baseUrl": "http://127.0.0.1:14220",
+          "note": "独立 React 前端(Vite+React19+Tailwind4),NocoBase /api/host 托管;多视图 + 真实 CRUD + Playwright e2e",
+          "rounds": {
+            "r1": {
+              "image": "./acceptance-native/pair-50.jpg",
+              "reasoning": [
+                "5 个视图:Overview、Sessions、Items、Counts、Reports",
+                "Created a test count session through the UI, verified it in list and detail views, edited its zone, verified the update, then deleted only that newly created record; server-side pagination was exercised for all three business lists.",
+                "Playwright e2e 全绿(逐视图断言真实数据 + CRUD 往返,E2E PASS)"
+              ],
+              "aiScore": null,
+              "userNote": "",
+              "userScore": null,
+              "verdict": "pass"
+            }
+          }
+        }
+      }
     },
     {
       "id": "51",

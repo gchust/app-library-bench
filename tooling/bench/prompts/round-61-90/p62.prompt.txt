@@ -1,0 +1,9 @@
+帮我在 NocoBase 复刻这个原型:客服工单系统。参考原型(OSS 模板):https://static-docs.nocobase.com/solution/templates/62-customer-service-ticket-system.html
+
+[环境] NocoBase env `maxbench01`(nb CLI 已配)。所有写操作一律 `nb api <...> -e maxbench01 -y`(始终显式 -e,带 -y)。
+**先把 `nocobase-prototype-repro` skill 读完(SKILL.md + references/ 全部:spec-template / block-recipes / gotchas / visual-loop)再动手。**
+原型 HTML 末尾内嵌 `<script type="application/nb-spec+json">` 权威规格(集合/字段/枚举/页面/招牌区块)——先 curl 抓原型读这个 spec,它是唯一事实源,严格照建。集合前缀统一用 `cus62_`(本实例里多个原型共存,前缀务必隔离)。
+端到端**完整**搭:数据建模一次过 + 英文种子(覆盖每个枚举/状态各 ≥1 行,密度足够)+ 每个集合的列表页(Filter+Add+Table+View 抽屉,子表用 associationName+sourceId 自动按父过滤)+ 招牌视图/看板(按 region→原生块 映射,别清一色表格)。
+[视觉自查] Playwright 全新无缓存浏览器打开 `/admin/<pageUid>`;token 按 skill 的 visual-loop 注入 localStorage NOCOBASE_TOKEN(env `maxbench01` 的 token 可从 nb 配置/登录取;appslib 可 UI 登录 admin@nocobase.com / Admin@appslib2026)。截图 ↔ 原型对照,对齐 **≥8 成**才算完成;招牌区块为空/报错绝不算完成。框住招牌主体,别出现大片白屏。
+全程自主多轮推进,不要停下来问我。
+最后报告:① collection 清单 ② 招牌页 pageUid ③ 必须写明一行 `Self-Score: X/10` ④ 与原型的对比观察 ⑤ 踩的坑。
